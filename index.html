@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tracewire: see which app talks to which server, free and private</title>
+<meta name="description" content="Tracewire is a free Android app that shows, live, which app on your phone is talking to which server, who owns it, where in the world it is and how much data it uses. It blocks ads and trackers, has a firewall and encrypted DNS, and keeps everything on your phone. No adverts, no account, no root.">
+<meta name="author" content="Jonathan Jackson">
+<link rel="canonical" href="https://customgpter.github.io/tracewire/">
+<meta name="theme-color" content="#eef3f9" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#060a14" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tracewire">
+<meta property="og:title" content="Tracewire: see every connection your phone makes">
+<meta property="og:description" content="Tracewire is a free Android app that shows, live, which app on your phone is talking to which server, who owns it, where in the world it is and how much data it uses. It blocks ads and trackers, has a firewall and encrypted DNS, and keeps everything on your phone. No adverts, no account, no root.">
+<meta property="og:url" content="https://customgpter.github.io/tracewire/">
+<meta property="og:image" content="https://customgpter.github.io/tracewire/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Tracewire: the wire T mark and the Home screen showing live speed and what was blocked today">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
+<link rel="preload" href="./assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="./assets/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="./assets/site.css?v=1">
+<link rel="stylesheet" href="./assets/house.css?v=1">
+<link rel="stylesheet" href="./assets/apps-list.css?v=1">
+<script src="./assets/apps-list.js?v=1" defer></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Tracewire", "url": "https://customgpter.github.io/tracewire/", "description": "Tracewire is a free Android app that shows, live, which app on your phone is talking to which server, who owns it, where in the world it is and how much data it uses. It blocks ads and trackers, has a firewall and encrypted DNS, and keeps everything on your phone. No adverts, no account, no root.", "applicationCategory": "SecurityApplication", "operatingSystem": "Android 10 or later", "softwareVersion": "1.0.0", "downloadUrl": "https://github.com/CustomGPTer/tracewire/releases/latest/download/Tracewire.apk", "releaseNotes": "https://customgpter.github.io/tracewire/releases.html", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "GBP"}, "inLanguage": "en-GB", "image": "https://customgpter.github.io/tracewire/assets/og.png", "author": {"@type": "Person", "name": "Jonathan Jackson"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is Tracewire really free?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. There is no paid version, no subscription and no adverts, and nothing is locked. Every feature is there from the start."}}, {"@type": "Question", "name": "Does it need root?", "acceptedAnswer": {"@type": "Answer", "text": "No. Tracewire uses Android's own VPN feature to see connections, on any phone with Android 10 or later. It is not a VPN service: nothing is sent to another server, and your internet address stays the same."}}, {"@type": "Question", "name": "Can it read my messages or passwords?", "acceptedAnswer": {"@type": "Answer", "text": "No. Tracewire never decrypts anything. For secure connections it sees which app, which server and how much data, plus the site's name that the app announces when it connects. The contents stay encrypted."}}, {"@type": "Question", "name": "Why does Android show a key icon?", "acceptedAnswer": {"@type": "Answer", "text": "Android shows it for any app that uses the VPN feature. While Tracewire is watching, the key stays in the status bar. It does not mean your traffic is going anywhere else."}}, {"@type": "Question", "name": "Can I use another VPN at the same time?", "acceptedAnswer": {"@type": "Answer", "text": "No. Android lets one VPN-style app run at a time. If you switch another one on, Tracewire stops watching and tells you."}}, {"@type": "Question", "name": "Does it slow the internet down?", "acceptedAnswer": {"@type": "Answer", "text": "Not noticeably. Its own connection engine handled over 270 megabits a second in tests, far faster than mobile data. Blocking ads and trackers often makes pages lighter."}}, {"@type": "Question", "name": "Does it run down the battery?", "acceptedAnswer": {"@type": "Answer", "text": "A little, because it is working whenever you use the internet. When the screen is off it checks less often, and there is nothing to send anywhere."}}, {"@type": "Question", "name": "Where does the country and company information come from?", "acceptedAnswer": {"@type": "Answer", "text": "From lists kept on the phone: an open database of who owns each internet address and where it is registered, and AdGuard's open list of companies behind websites. Tracewire checks this site once a month for newer lists, if you allow it."}}, {"@type": "Question", "name": "What is the packet capture for?", "acceptedAnswer": {"@type": "Answer", "text": "For people who study networks. It records every packet in the standard format that Wireshark opens. Secure contents stay encrypted. Most people never need it."}}, {"@type": "Question", "name": "How do I update Tracewire?", "acceptedAnswer": {"@type": "Answer", "text": "In Settings, About, Check for app updates opens the release notes on this site. Download the new file and install it over the old one. Your history, rules and settings are kept."}}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+<div class="wrap">
+<a class="brand" href="./" aria-label="Tracewire home"><svg viewBox="0 0 108 108" aria-hidden="true"><defs><radialGradient id="twb" cx="50%" cy="43%" r="72%"><stop offset="0" stop-color="#13254A"/><stop offset="1" stop-color="#050912"/></radialGradient><linearGradient id="twg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#67E8F9"/><stop offset="1" stop-color="#22D3EE"/></linearGradient></defs><rect width="108" height="108" rx="24" fill="url(#twb)"/><path d="M18 0v108M36 0v108M54 0v108M72 0v108M90 0v108M0 18h108M0 36h108M0 54h108M0 72h108M0 90h108" stroke="#22D3EE" stroke-opacity=".08" stroke-width=".6"/><circle cx="54" cy="70" r="11" fill="#22D3EE" fill-opacity=".15"/><path d="M35 39H73M54 39V70" stroke="url(#twg)" stroke-width="4.6" stroke-linecap="round" fill="none"/><circle cx="35" cy="39" r="4.6" fill="#0B1630" stroke="#67E8F9" stroke-width="2.6"/><circle cx="73" cy="39" r="4.6" fill="#0B1630" stroke="#67E8F9" stroke-width="2.6"/><circle cx="54" cy="70" r="5" fill="#22D3EE"/><circle cx="54" cy="39" r="2.4" fill="#fff"/></svg><span>Tracewire</span></a>
+<nav aria-label="Main"><ul><li><a href="./#features">Features</a></li><li><a href="./compare.html">Compare</a></li><li><a href="./releases.html">Releases</a></li><li><a class="more-apps" href="./more-apps.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="6.5" height="6.5" rx="1.6"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.6"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.6"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.6"/></svg>More apps</a></li></ul></nav>
+<a class="button small" href="./#download"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11"/><path d="M7 10.5l5 5 5-5"/><path d="M5 20h14"/></svg>Download</a>
+</div>
+</header>
+<main id="main">
+<div class="hero">
+<div class="wrap hero-grid">
+<div class="hero-copy">
+<h1>See every connection your phone makes.</h1>
+<p class="lede">Tracewire shows, live, which app is talking to which server, who owns it, where in the world it is and how much data it uses.</p><p class="lede">Then it does something about it: it blocks ads and trackers, gives every app a firewall, and keeps your look-ups private with encrypted DNS.</p>
+<div class="gate-scope"><div class="law-box" data-gate><label><input type="checkbox"> I understand and will use this app within the law</label><p>Watching someone else&#x27;s phone traffic is covered by the law. <a href="terms.html#law">What the law says</a></p><noscript><p>Turn on JavaScript to tick the box and download.</p></noscript></div><p class="get" id="download"><a class="button" data-href="https://github.com/CustomGPTer/tracewire/releases/latest/download/Tracewire.apk" aria-disabled="true" role="link" tabindex="-1"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11"/><path d="M7 10.5l5 5 5-5"/><path d="M5 20h14"/></svg>Download for Android</a><a class="aside" href="#install">How to install</a></p></div>
+<ul class="pills"><li>Version 1.0.0</li><li>Android 10 or later</li><li>9.2 MB</li></ul>
+<p class="facts">Free, with nothing to unlock. No adverts, no account with the developer, no tracking, no root. <a href="compare.html">Compare</a> or read the <a href="releases.html">release notes</a>.</p>
+<p class="facts">Chrome may say the file might be harmful. It shows this for app files that do not come from Google Play. Choose Download anyway.</p>
+</div>
+<div class="hero-phone"><div class="phone"><img src="./assets/screens/live.png" alt="Live: every connection as it happens, with the app, the server&#x27;s name, its owner and the country." width="393" height="852" fetchpriority="high"></div></div>
+</div>
+</div>
+
+<section class="promises" aria-label="In short">
+<div class="wrap"><ul><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M8.6 12.4l2.3 2.3 4.5-4.9"/></svg><span><b>No adverts</b><span>None in the app and none on this site.</span></span></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M8.6 12.4l2.3 2.3 4.5-4.9"/></svg><span><b>Stays on your phone</b><span>What your apps do is never sent to anyone.</span></span></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M8.6 12.4l2.3 2.3 4.5-4.9"/></svg><span><b>No root needed</b><span>Works on any phone with Android 10 or later.</span></span></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M8.6 12.4l2.3 2.3 4.5-4.9"/></svg><span><b>No account</b><span>Nothing to sign up for.</span></span></li></ul></div>
+</section>
+
+<section id="screens" aria-labelledby="screens-h">
+<div class="wrap">
+<h2 id="screens-h">A look inside</h2>
+<p class="intro">These are the real screens, drawn from the app&#x27;s own code with made-up apps and traffic. Swipe or scroll sideways to see them all.</p>
+<div class="gallery" tabindex="0" role="region" aria-label="Screens from Tracewire"><figure class="shot"><div class="phone"><img src="./assets/screens/opening.png" alt="The opening: lines of light join up into the wire T mark." width="393" height="852" loading="eager" decoding="async"></div><figcaption>The opening: lines of light join up into the wire T mark.</figcaption></figure><figure class="shot"><div class="phone"><img src="./assets/screens/home.png" alt="Home: watching, live speed, what was blocked today and today&#x27;s data." width="393" height="852" loading="eager" decoding="async"></div><figcaption>Home: watching, live speed, what was blocked today and today&#x27;s data.</figcaption></figure><figure class="shot"><div class="phone"><img src="./assets/screens/live.png" alt="Live: every connection as it happens, with the app, the server&#x27;s name, its owner and the country." width="393" height="852" loading="eager" decoding="async"></div><figcaption>Live: every connection as it happens, with the app, the server&#x27;s name, its owner and the country.</figcaption></figure><figure class="shot"><div class="phone"><img src="./assets/screens/connection.png" alt="One connection: the server, the data each way, and one-tap buttons to block the site, the country or the app." width="393" height="852" loading="lazy" decoding="async"></div><figcaption>One connection: the server, the data each way, and one-tap buttons to block the site, the country or the app.</figcaption></figure><figure class="shot"><div class="phone"><img src="./assets/screens/map.png" alt="The map: the countries your data goes to, with the share of it each one gets." width="393" height="852" loading="lazy" decoding="async"></div><figcaption>The map: the countries your data goes to, with the share of it each one gets.</figcaption></figure><figure class="shot"><div class="phone"><img src="./assets/screens/app.png" alt="Each app: its privacy grade, the companies it reaches, and its own firewall." width="393" height="852" loading="lazy" decoding="async"></div><figcaption>Each app: its privacy grade, the companies it reaches, and its own firewall.</figcaption></figure><figure class="shot"><div class="phone"><img src="./assets/screens/protection.png" alt="Protection: the ad and tracker blocker, Lockdown, new-app rules and encrypted DNS." width="393" height="852" loading="lazy" decoding="async"></div><figcaption>Protection: the ad and tracker blocker, Lockdown, new-app rules and encrypted DNS.</figcaption></figure><figure class="shot"><div class="phone"><img src="./assets/screens/plan.png" alt="Your data plan: where you will be by the end of the month, and a daily budget." width="393" height="852" loading="lazy" decoding="async"></div><figcaption>Your data plan: where you will be by the end of the month, and a daily budget.</figcaption></figure><figure class="shot"><div class="phone"><img src="./assets/screens/night.png" alt="While you slept: which apps used data overnight, and who they talked to." width="393" height="852" loading="lazy" decoding="async"></div><figcaption>While you slept: which apps used data overnight, and who they talked to.</figcaption></figure><figure class="shot"><div class="phone"><img src="./assets/screens/home-light.png" alt="The light look, for daytime. Tracewire follows your phone&#x27;s setting." width="393" height="852" loading="lazy" decoding="async"></div><figcaption>The light look, for daytime. Tracewire follows your phone&#x27;s setting.</figcaption></figure></div>
+</div>
+</section>
+
+<section id="how" aria-labelledby="how-h">
+<div class="wrap">
+<h2 id="how-h">How it works</h2>
+<p class="intro">Tracewire uses Android&#x27;s VPN feature to sit between your apps and the internet, on the phone itself. Nothing goes to another server.</p>
+<ol class="steps"><li><h3>Tap Start watching</h3><p>Android asks once whether Tracewire may watch the phone&#x27;s connections. Allow it, and a key appears in the status bar.</p></li><li><h3>Use your phone as normal</h3><p>Every connection passes through Tracewire&#x27;s own engine on the phone. It notes the app, the server and the data, and applies your rules.</p></li><li><h3>Look whenever you like</h3><p>Open Live to see it happening, the map to see where it goes, or an app to see its grade. Alerts tell you about the things worth knowing.</p></li></ol>
+</div>
+</section>
+
+<section id="features" aria-labelledby="features-h">
+<div class="wrap">
+<h2 id="features-h">Everything is in, and all of it is free</h2>
+<p class="intro">The best of the monitors, firewalls and tracker blockers in one app, with nothing held back for a paid tier, because there is no paid tier.</p>
+<div class="groups"><div class="group"><h3>Seeing everything</h3><dl><div><dt>Every connection, live</dt><dd>Which app opened it, the server&#x27;s name, its address and port, how much went each way and whether it is still open. Search by app, site, company or country.</dd></div><div><dt>Who is behind each server</dt><dd>The company that owns the server and the network it is on, and whether it is advertising, analytics, social media or simply a delivery network.</dd></div><div><dt>A world map of your data</dt><dd>See which countries your data travels to, how much each one gets, and which apps send it there.</dd></div><div><dt>Each app laid bare</dt><dd>A privacy grade from A to F with plain reasons, the sites and companies it reaches, its activity across the day and its data for the week.</dd></div></dl></div><div class="group"><h3>Protection</h3><dl><div><dt>Block ads and trackers</dt><dd>One switch stops every app reaching the advertising and analytics companies on the list. If an app misbehaves, let it through on its page.</dd></div><div><dt>A firewall for every app</dt><dd>Switch off Wi-Fi, mobile data, roaming, screen-off or background use for any app. Block a site for one app or all of them, or whole countries.</dd></div><div><dt>Lockdown</dt><dd>Only the apps you choose can go online. Everything else is cut off until you turn it off. Android&#x27;s own services keep working.</dd></div><div><dt>Encrypted DNS</dt><dd>Website look-ups go encrypted to Quad9, Cloudflare or Mullvad, so your network cannot see or change them. Normal DNS takes over if they cannot be reached.</dd></div></dl></div><div class="group"><h3>Your data</h3><dl><div><dt>Data plan and forecasts</dt><dd>Set your allowance and billing day. Tracewire shows where you will be by the end of the month, a daily budget and the day you would run out.</dd></div><div><dt>Alerts that matter</dt><dd>A new app going online, an app reaching a new country, heavy use in the background, or a jump in data. Each one can be switched off.</dd></div><div><dt>While you slept</dt><dd>Each morning: which apps woke up overnight, how much they used and who they talked to.</dd></div><div><dt>Android&#x27;s own records</dt><dd>With Usage access, every app&#x27;s mobile and Wi-Fi totals for months back, even from before you installed Tracewire.</dd></div></dl></div><div class="group"><h3>Everyday</h3><dl><div><dt>Reports and exports</dt><dd>A PDF privacy report, a CSV list of every connection for Excel, and a packet capture for Wireshark.</dd></div><div><dt>Widgets and a tile</dt><dd>Two home screen widgets with live speed and what was blocked, and a Quick Settings tile to start or stop.</dd></div><div><dt>App lock</dt><dd>Optional fingerprint, face or PIN lock, and it can hide Tracewire from the recent apps screen.</dd></div><div><dt>Your look</dt><dd>Dark or light, following your phone, with an opening animation you can shorten or switch off.</dd></div></dl></div></div>
+</div>
+</section>
+
+<section id="privacy" aria-labelledby="privacy-h">
+<div class="wrap">
+<h2 id="privacy-h">A privacy tool that is private itself</h2>
+<ul class="plain"><li><h3>Kept on your phone</h3><p>Your connection history, rules and reports stay in the app. There is no account and no Tracewire server.</p></li><li><h3>Nothing decrypted</h3><p>Tracewire never opens secure connections. It reads only what every network can see: which server, how much, and the site&#x27;s announced name.</p></li><li><h3>No ads, no tracking</h3><p>There is no advertising, analytics or tracking, in the app or on this site.</p></li><li><h3>Only two things online</h3><p>Encrypted DNS look-ups to the service you pick, and a monthly check of this site for newer lists, which you can switch off.</p></li></ul>
+</div>
+</section>
+
+<section id="install" aria-labelledby="install-h">
+<div class="wrap">
+<h2 id="install-h">Installing and updating</h2>
+<p class="intro">Tracewire is not on Google Play, so your phone asks a couple of extra questions the first time.</p>
+<ol class="steps"><li><h3>Download the app file</h3><p>Tick the box above, then tap Download on your phone. The file is called Tracewire.apk and is about 9.2 MB. If Chrome says the file might be harmful, choose Download anyway.</p></li><li><h3>Allow the install</h3><p>Open the file. The first time, Android asks you to allow your browser to install apps. Allow it, go back and tap Install. If Google Play Protect steps in, choose More details, then Install anyway.</p></li><li><h3>Updating later</h3><p>In Settings, About, Check for app updates opens the release notes page. Install the new file over the old one and your history, rules and settings are kept.</p></li></ol>
+<p class="after-table">Version 1.0.0, released 24 November 2026. See the <a href="releases.html">release notes</a>, or <a href="releases.html#checking">check your download</a>.</p>
+</div>
+</section>
+
+<section id="questions" aria-labelledby="questions-h">
+<div class="wrap">
+<h2 id="questions-h">Questions</h2>
+<div class="faq"><details><summary>Is Tracewire really free?</summary><p>Yes. There is no paid version, no subscription and no adverts, and nothing is locked. Every feature is there from the start.</p></details><details><summary>Does it need root?</summary><p>No. Tracewire uses Android&#x27;s own VPN feature to see connections, on any phone with Android 10 or later. It is not a VPN service: nothing is sent to another server, and your internet address stays the same.</p></details><details><summary>Can it read my messages or passwords?</summary><p>No. Tracewire never decrypts anything. For secure connections it sees which app, which server and how much data, plus the site&#x27;s name that the app announces when it connects. The contents stay encrypted.</p></details><details><summary>Why does Android show a key icon?</summary><p>Android shows it for any app that uses the VPN feature. While Tracewire is watching, the key stays in the status bar. It does not mean your traffic is going anywhere else.</p></details><details><summary>Can I use another VPN at the same time?</summary><p>No. Android lets one VPN-style app run at a time. If you switch another one on, Tracewire stops watching and tells you.</p></details><details><summary>Does it slow the internet down?</summary><p>Not noticeably. Its own connection engine handled over 270 megabits a second in tests, far faster than mobile data. Blocking ads and trackers often makes pages lighter.</p></details><details><summary>Does it run down the battery?</summary><p>A little, because it is working whenever you use the internet. When the screen is off it checks less often, and there is nothing to send anywhere.</p></details><details><summary>Where does the country and company information come from?</summary><p>From lists kept on the phone: an open database of who owns each internet address and where it is registered, and AdGuard&#x27;s open list of companies behind websites. Tracewire checks this site once a month for newer lists, if you allow it.</p></details><details><summary>What is the packet capture for?</summary><p>For people who study networks. It records every packet in the standard format that Wireshark opens. Secure contents stay encrypted. Most people never need it.</p></details><details><summary>How do I update Tracewire?</summary><p>In Settings, About, Check for app updates opens the release notes on this site. Download the new file and install it over the old one. Your history, rules and settings are kept.</p></details></div>
+</div>
+</section>
+</main>
+<footer class="colophon">
+<div class="wrap">
+<div>
+<a class="brand" href="./" aria-label="Tracewire home"><svg viewBox="0 0 108 108" aria-hidden="true"><defs><radialGradient id="twb2" cx="50%" cy="43%" r="72%"><stop offset="0" stop-color="#13254A"/><stop offset="1" stop-color="#050912"/></radialGradient><linearGradient id="twg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#67E8F9"/><stop offset="1" stop-color="#22D3EE"/></linearGradient></defs><rect width="108" height="108" rx="24" fill="url(#twb2)"/><path d="M18 0v108M36 0v108M54 0v108M72 0v108M90 0v108M0 18h108M0 36h108M0 54h108M0 72h108M0 90h108" stroke="#22D3EE" stroke-opacity=".08" stroke-width=".6"/><circle cx="54" cy="70" r="11" fill="#22D3EE" fill-opacity=".15"/><path d="M35 39H73M54 39V70" stroke="url(#twg2)" stroke-width="4.6" stroke-linecap="round" fill="none"/><circle cx="35" cy="39" r="4.6" fill="#0B1630" stroke="#67E8F9" stroke-width="2.6"/><circle cx="73" cy="39" r="4.6" fill="#0B1630" stroke="#67E8F9" stroke-width="2.6"/><circle cx="54" cy="70" r="5" fill="#22D3EE"/><circle cx="54" cy="39" r="2.4" fill="#fff"/></svg><span>Tracewire</span></a>
+<p>&copy; 2026 Jonathan Jackson. Tracewire is an independent app.</p>
+<p>This site uses no cookies and no tracking.</p>
+<p>Set in Bricolage Grotesque and Atkinson Hyperlegible.</p>
+</div>
+<nav aria-label="The app"><h2>The app</h2><ul>
+<li><a href="./">Home</a></li>
+<li><a href="./compare.html">Compare</a></li>
+<li><a href="./releases.html">Release notes</a></li>
+</ul></nav>
+<nav aria-label="Legal"><h2>Legal</h2><ul>
+<li><a href="./privacy.html">Privacy policy</a></li>
+<li><a href="./terms.html">Terms of use</a></li>
+<li><a href="./licences.html">Licences</a></li>
+</ul></nav>
+<nav aria-label="More"><h2>More</h2><ul>
+<li><a href="./more-apps.html">More apps</a></li>
+<li><a href="https://customgpter.github.io/">All apps</a></li>
+<li><a href="https://github.com/CustomGPTer/tracewire/issues">Contact</a></li>
+</ul></nav>
+</div>
+</footer>
+</body>
+</html>

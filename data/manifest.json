@@ -1,0 +1,12 @@
+{
+ "geo": {
+  "version": 20261123,
+  "file": "geo-20261123.bin.gz",
+  "sha256": "fe959ba2a80116f25d69cb2e55120121e2ba9f48437e56873b98c89fdc4f2160"
+ },
+ "trackers": {
+  "version": 20261123,
+  "file": "trackers-20261123.tsv.gz",
+  "sha256": "c6792ceed64c8942d0fdbea2a768f2e7c9c747d4adc07289282376f68dbc1cf4"
+ }
+}
