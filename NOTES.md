@@ -1,11 +1,8 @@
-First release of Tracewire: see, live, which app on your phone is talking to which server, who owns it, where it is and how much data it uses.
+Tracewire 1.0.1.
 
-- Live connections with the server's name, address, owner, country and data each way, searchable and filtered.
-- The world map, each app's privacy grade, its sites and companies, and its activity.
-- Protection: ad and tracker blocker, a firewall for every app, blocked sites and countries, Lockdown, and new apps held until you allow them.
-- Encrypted DNS through Quad9, Cloudflare or Mullvad, with automatic fallback.
-- Data plan forecasts, Android's own usage records, alerts and the overnight report.
-- PDF privacy report, CSV connection list and PCAP packet capture.
-- Two widgets, a Quick Settings tile, an optional fingerprint or PIN lock, light and dark looks.
+- Latest connections on Home now shows the day's saved connections after watching stops or the phone restarts, instead of "Nothing yet".
+- A name looked up twice at once (Android asks for IPv4 and IPv6 together) now shows as one row marked x2.
+- When an app sends a look-up straight to a DNS server, the row now says "via" that server, so its flag and network aren't mistaken for the site's.
+- Tidier network names, such as "Layer3" instead of "Layer3 Limited - Layer3".
 
-Android 10 or later. Free, no adverts, no account, no root. Everything stays on your phone.
+Android 10 or later. Installs over 1.0.0 and keeps your history, rules and settings. Check the file against SHA256SUMS before installing.
