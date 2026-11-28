@@ -1,8 +1,7 @@
-Tracewire 1.0.1.
+Tracewire 1.0.2 only starts watching when you open it, and tells you first if another VPN is on.
 
-- Latest connections on Home now shows the day's saved connections after watching stops or the phone restarts, instead of "Nothing yet".
-- A name looked up twice at once (Android asks for IPv4 and IPv6 together) now shows as one row marked x2.
-- When an app sends a look-up straight to a DNS server, the row now says "via" that server, so its flag and network aren't mistaken for the site's.
-- Tidier network names, such as "Layer3" instead of "Layer3 Limited - Layer3".
+- Tracewire no longer starts by itself after it updates or the phone restarts, so it can't switch off your other VPN (ExpressVPN, NordVPN and so on) without you knowing. If it was watching before, it starts again the next time you open it.
+- If another VPN is on when watching is about to start, a short note explains that Android allows only one VPN at a time and asks Start watching or Not now. The quick-settings tile and widget open the app to show the same note.
+- Settings: "Start again after a restart" is now "Start again when you open Tracewire".
 
-Android 10 or later. Installs over 1.0.0 and keeps your history, rules and settings. Check the file against SHA256SUMS before installing.
+Installs over the earlier version and keeps everything.
